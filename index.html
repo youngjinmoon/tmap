@@ -5,8 +5,9 @@
         <script src="https://apis.openapi.sk.com/tmap/jsv2?version=1&format=javascript&appkey=5b824cb0-2549-4355-a8af-59dbb9f2938c"></script>
         <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 	<script type="text/javascript">
+			var marker, map;
 			function initTmap(){
-				var map = new Tmapv2.Map("map_div",  
+				map = new Tmapv2.Map("map_div",  
 				{
 					center: new Tmapv2.LatLng(37.566481622437934,126.98502302169841), // 지도 초기 좌표
 					width: "890px", 
@@ -15,7 +16,7 @@
 				});
 			}
 
-			var marker;
+		
 			
 			function loadGetAddressFromLonLat() {
 				var tData = new Tmapv2.extension.TData();
